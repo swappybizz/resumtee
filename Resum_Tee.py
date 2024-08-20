@@ -50,7 +50,7 @@ def get_resume_drom_jobPost_PerosnalInfo(job_posting):
             for education in items:
                 perInfo += f"- {education['school']} ({education['degree']}): {education['details']}\n"
     
-    client = OpenAI(api_key=st.secrets["openai_api_key"])
+    client = OpenAI(api_key=os.environ["openai_api_key"])
     completion = client.chat.completions.create(
         model='gpt-4o',
         messages=[
@@ -211,9 +211,9 @@ def show_profile():
 
 
 
-os.environ["mongo_uri"] = st.secrets["mongo_uri"]
-os.environ["openai_api_key"] = st.secrets["openai_api_key"]
-MONGO_URI = st.secrets["mongo_uri"]
+
+
+MONGO_URI = os.environ["mongo_uri"]
 client = MongoClient(MONGO_URI)
 db = client["resum_tee"]
 user_collection = db["users"]
