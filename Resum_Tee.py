@@ -242,6 +242,7 @@ if 'resume_html' not in st.session_state:
     st.session_state["resume_html"] = None
 
 with st.sidebar:
+    "Change Resume like Tee"
     if not st.session_state.signed_in:
         st.markdown("## Sign In")
         username = st.text_input("Username")
