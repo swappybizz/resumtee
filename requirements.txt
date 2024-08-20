@@ -1,0 +1,6 @@
+streamlit
+pymongo
+pymupdf
+python-docx
+openai
+bcrypt
