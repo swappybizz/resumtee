@@ -221,7 +221,7 @@ profile_collection = db["profile"]
 
 st.set_page_config(page_title="Resum_Tee", page_icon="📄", layout="wide", initial_sidebar_state="expanded")
 
-st.logo(icon_image="📄",image="resumtea.png")
+st.logo(icon_image="resumtea.png",image="resumtea.png")
 
 if "signed_in" not in st.session_state:
     st.session_state.signed_in = False
